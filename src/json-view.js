@@ -22,14 +22,23 @@ function expandedTemplate(params = {}) {
   `
 }
 
+function escapeHTML(text) {
+  return (text || '')
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;")
+}
+
 function notExpandedTemplate(params = {}) {
   const { key, value, type } = params;
   return `
     <div class="line">
       <div class="empty-icon"></div>
-      <div class="json-key">${key}</div>
+      <div class="json-key">${escapeHTML(key)}</div>
       <div class="json-separator">:</div>
-      <div class="json-value json-${type}">${value}</div>
+      <div class="json-value json-${escapeHTML(type)}">${escapeHTML(value)}</div>
     </div>
   `
 }
