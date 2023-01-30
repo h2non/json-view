@@ -76,7 +76,7 @@ function setCaretIconRight(node) {
   }
 }
 
-function toggleNode(node) {
+export function toggleNode(node) {
   if (node.isExpanded) {
     node.isExpanded = false;
     setCaretIconRight(node);
@@ -265,6 +265,7 @@ export function destroy(tree) {
  * Export public interface
  */
 export default {
+  toggleNode,
   render,
   create,
   renderJSON,
