@@ -1,5 +1,5 @@
 {
-  "name": "@pgrabovets/json-view",
+  "name": "json-view",
   "version": "2.7.1",
   "description": "",
   "main": "dist/jsonview.js",
