@@ -5,7 +5,8 @@
   "main": "dist/jsonview.js",
   "scripts": {
     "serve": "webpack serve",
-    "build": "webpack"
+    "build": "webpack",
+    "lint": "./node_modules/.bin/standard src"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
     "css-loader": "^6.5.1",
     "sass": "^1.45.2",
     "sass-loader": "^12.4.0",
+    "standard": "^17.0.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
