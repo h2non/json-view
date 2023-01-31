@@ -23,7 +23,10 @@ function expandedTemplate(params = {}) {
 }
 
 function escapeHTML(text) {
-  return (text || '')
+  if (typeof text !== 'string') {
+      return ''
+  }
+  return text
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
