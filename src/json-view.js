@@ -161,8 +161,8 @@ function traverse(node, callback) {
  * @return {object}
  */
 function createNode(opt = {}) {
-  let value = opt.hasOwnProperty('value') ? opt.value : null;
-  if (typeof value == 'object' && Object.keys(value).length == 0) {
+  let value = Object.has(opt, 'value') ? opt.value : null;
+  if (value && typeof value === 'object' && Object.keys(value).length === 0) {
     value = "{}";
   }
   return {
